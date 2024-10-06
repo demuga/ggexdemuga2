@@ -11,13 +11,25 @@
         <h2>Welcome to the Protected Page</h2>
         <p>You are logged in!</p>
         
-        <!-- Updated Video Element -->
+        <!-- Video Section -->
         <video width="600" controls>
             <source src="video1.mp4.mp4" type="video/mp4"> <!-- Ensure the file name matches -->
             Your browser does not support the video tag.
         </video>
-        
         <br>
+        
+        <!-- Features Section -->
+        <div class="features-section">
+            <h3>Features of the Website</h3>
+            <ul>
+                <li><a href="#feature1">Feature 1</a></li>
+                <li><a href="#feature2">Feature 2</a></li>
+                <li><a href="#feature3">Feature 3</a></li>
+                <li><a href="#feature4">Feature 4</a></li>
+                <li><a href="#feature5">Feature 5</a></li>
+            </ul>
+        </div>
+
         <button onclick="logout()">Logout</button>
     </div>
 
@@ -36,5 +48,27 @@
             window.location.href = 'index.html';
         }
     </script>
-</body>
-</html>
+
+    <!-- Add feature details here -->
+    <div class="feature-details">
+        <div id="feature1">
+            <h3>Feature 1</h3>
+            <p>Details about feature 1...</p>
+        </div>
+        <div id="feature2">
+            <h3>Feature 2</h3>
+            <p>Details about feature 2...</p>
+        </div>
+        <div id="feature3">
+            <h3>Feature 3</h3>
+            <p>Details about feature 3...</p>
+        </div>
+        <div id="feature4">
+            <h3>Feature 4</h3>
+            <p>Details about feature 4...</p>
+        </div>
+        <div id="feature5">
+            <h3>Feature 5</h3>
+            <p>Details about feature 5...</p>
+        </div>
+   
