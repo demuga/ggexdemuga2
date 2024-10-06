@@ -97,5 +97,42 @@ body {
     height: 100vh;
     margin: 0;
 }
+/* General Styling for Body */
+body {
+    font-family: 'Poppins', sans-serif; /* Using a more modern font */
+    background: linear-gradient(135deg, #FF5F6D, #FFC371); /* Gradient colors */
+    background-size: 300% 300%; /* Makes the gradient larger for animation */
+    animation: gradientAnimation 5s ease infinite; /* Animation */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Keyframes for animation */
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+/* General Styling for Body */
+body {
+    font-family: 'Poppins', sans-serif; /* Using a more modern font */
+    background: url('your-love-background.gif') no-repeat center center fixed; /* Set GIF as background */
+    background-size: cover; /* Cover the entire background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script>
+    particlesJS.load('particles-js', 'particles.json', function() {
+        console.log('callback - particles.js config loaded');
+    });
+</script>
+<div id="particles-js"></div>
 
 /* Remaining styles stay the same... */
