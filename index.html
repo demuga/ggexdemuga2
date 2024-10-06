@@ -1,48 +1,86 @@
 <link rel="stylesheet" href="style.css">
-<h2>Login</h2>
-<input type="text" id="username" placeholder="Username" required>
-<input type="password" id="password" placeholder="Password" required>
-<button onclick="login()">Login</button>
-<div id="error-message" style="color: red;"></div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
 
-<script>
-  function login() {
-    var username = document.getElementById('username').value;
-    var password = document.getElementById('password').value;
+        .login-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
 
-    // Set a predefined username and password (this can be customized)
-    var validUsername = 'user';
-    var validPassword = 'password123';
+        input {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
 
-    // Check if the provided username and password match the predefined credentials
-    if (username === validUsername && password === validPassword) {
-      // Save a "logged in" status to localStorage
-      localStorage.setItem('loggedIn', true);
-      // Redirect the user to the protected page
-      window.location.href = 'protected-page.html';
-    } else {
-      // Display an error message if credentials are incorrect
-      document.getElementById('error-message').innerText = 'Invalid username or password';
-    }
-  }
-</script>
+        button {
+            padding: 10px 20px;
+            border: none;
+            background-color: #28a745;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
 
-<h2>Welcome to the Protected Page</h2>
-<p>You are logged in!</p>
-<button onclick="logout()">Logout</button>
+        button:hover {
+            background-color: #218838;
+        }
 
-<script>
-  // Check if the user is logged in
-  if (!localStorage.getItem('loggedIn')) {
-    // If not logged in, redirect to the login page
-    window.location.href = 'index.html';
-  }
+        #error-message {
+            color: red;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Login</h2>
+        <input type="text" id="username" placeholder="Username" required>
+        <input type="password" id="password" placeholder="Password" required>
+        <button onclick="login()">Login</button>
+        <div id="error-message"></div>
+    </div>
 
-  // Function to log the user out
-  function logout() {
-    // Remove the "logged in" status from localStorage
-    localStorage.removeItem('loggedIn');
-    // Redirect to the login page
-    window.location.href = 'index.html';
-  }
-</script>
+    <script>
+        function login() {
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+
+            // Predefined username and password (for demo purposes)
+            var validUsername = 'user';
+            var validPassword = 'password123';
+
+            // Validate login credentials
+            if (username === validUsername && password === validPassword) {
+                // Store logged-in status in localStorage
+                localStorage.setItem('loggedIn', true);
+                // Redirect to the protected page
+                window.location.href = 'protected-page.html';
+            } else {
+                // Display error message if login fails
+                document.getElementById('error-message').innerText = 'Invalid username or password';
+            }
+        }
+    </script>
+</body>
+</html>
