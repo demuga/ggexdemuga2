@@ -1,7 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<<!DOCTYPE html>
-<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -33,35 +31,3 @@
     </script>
 </body>
 </html>
->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Protected Page</title>
-    <!-- Link to the external stylesheet -->
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="protected-container">
-        <h2>Welcome to the Protected Page</h2>
-        <p>You are logged in!</p>
-        <button onclick="logout()">Logout</button>
-    </div>
-
-    <script>
-        // Check if user is logged in
-        if (!localStorage.getItem('loggedIn')) {
-            // If not logged in, redirect to login page
-            window.location.href = 'index.html';
-        }
-
-        // Logout function
-        function logout() {
-            // Remove logged-in status from localStorage
-            localStorage.removeItem('loggedIn');
-            // Redirect to the login page
-            window.location.href = 'index.html';
-        }
-    </script>
-</body>
-</html>
-
