@@ -1,22 +1,33 @@
 /* General Styling for Body */
 body {
-    font-family: 'Poppins', sans-serif; /* Using a more modern font */
-    background: linear-gradient(135deg, #6dd5ed, #2193b0); /* Gradient background */
+    font-family: 'Poppins', sans-serif; /* Modern font */
+    margin: 0;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    margin: 0;
+    overflow: hidden; /* Prevent scrollbars */
 }
 
-/* Styling for Containers */
+/* Particle Background */
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1; /* Ensure particles are behind other content */
+}
+
+/* Styling for Login and Protected Containers */
 .login-container, .protected-container {
+    position: relative;
     background: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
     padding: 30px;
     border-radius: 15px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* More pronounced shadow */
     text-align: center;
-    width: 320px; /* Fixed width to make it centered */
+    width: 320px; /* Fixed width for centering */
+    z-index: 2; /* Ensure container is above particles */
+    animation: fadeIn 0.8s ease-in-out; /* Animation on load */
 }
 
 /* Input Fields Styling */
@@ -67,7 +78,7 @@ button:hover {
 
 /* Error Message Styling */
 #error-message {
-    color: #e74c3c; /* A more stylish red */
+    color: #e74c3c; /* A stylish red */
     margin-top: 10px;
     font-size: 0.9rem;
 }
@@ -82,57 +93,16 @@ button:hover {
     }
 }
 
-/* Add animation to containers */
-.login-container, .protected-container {
-    animation: fadeIn 0.8s ease-in-out;
-}
-/* Common styling for both login and protected page */
+/* Animated Gradient Background */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern font */
-    background: url('background.gif') no-repeat center center fixed; /* Set GIF as background */
-    background-size: cover; /* Cover the entire background */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-}
-/* General Styling for Body */
-body {
-    font-family: 'Poppins', sans-serif; /* Using a more modern font */
     background: linear-gradient(135deg, #FF5F6D, #FFC371); /* Gradient colors */
     background-size: 300% 300%; /* Makes the gradient larger for animation */
     animation: gradientAnimation 5s ease infinite; /* Animation */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
 }
 
-/* Keyframes for animation */
+/* Keyframes for gradient animation */
 @keyframes gradientAnimation {
     0% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
 }
-/* General Styling for Body */
-body {
-    font-family: 'Poppins', sans-serif; /* Using a more modern font */
-    background: url('your-love-background.gif') no-repeat center center fixed; /* Set GIF as background */
-    background-size: cover; /* Cover the entire background */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-}
-<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-<script>
-    particlesJS.load('particles-js', 'particles.json', function() {
-        console.log('callback - particles.js config loaded');
-    });
-</script>
-<div id="particles-js"></div>
-
-/* Remaining styles stay the same... */
