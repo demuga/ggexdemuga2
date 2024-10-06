@@ -86,3 +86,16 @@ button:hover {
 .login-container, .protected-container {
     animation: fadeIn 0.8s ease-in-out;
 }
+/* Common styling for both login and protected page */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern font */
+    background: url('background.gif') no-repeat center center fixed; /* Set GIF as background */
+    background-size: cover; /* Cover the entire background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Remaining styles stay the same... */
