@@ -1,7 +1,48 @@
 <link rel="stylesheet" href="style.css">
 <!DOCTYPE html>
 <html lang="en">
+<<!DOCTYPE html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <!-- Link to the external stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="login-container">
+        <h2>Login</h2>
+        <input type="text" id="username" placeholder="Username" required>
+        <input type="password" id="password" placeholder="Password" required>
+        <button onclick="login()">Login</button>
+        <div id="error-message"></div>
+    </div>
+
+    <script>
+        function login() {
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+
+            // Predefined username and password
+            var validUsername = 'user';
+            var validPassword = 'password123';
+
+            // Validate login credentials
+            if (username === validUsername && password === validPassword) {
+                // Store logged-in status in localStorage
+                localStorage.setItem('loggedIn', true);
+                // Redirect to the protected page
+                window.location.href = 'protected-page.html';
+            } else {
+                // Display error message if login fails
+                document.getElementById('error-message').innerText = 'Invalid username or password';
+            }
+        }
+    </script>
+</body>
+</html>
+>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Page</title>
