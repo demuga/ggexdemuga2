@@ -1,7 +1,8 @@
 /* General Styling for Body */
 body {
     font-family: 'Poppins', sans-serif; /* Using a more modern font */
-    background: linear-gradient(135deg, #6dd5ed, #2193b0); /* Gradient background */
+    background: url('background.gif') no-repeat center center fixed; /* Set GIF as background */
+    background-size: cover; /* Cover the entire background */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -17,6 +18,17 @@ body {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* More pronounced shadow */
     text-align: center;
     width: 320px; /* Fixed width to make it centered */
+    display: flex;
+    flex-direction: column; /* Column layout for items */
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+}
+
+/* Video Styling */
+video {
+    margin: 20px 0; /* Space above and below the video */
+    max-width: 100%; /* Responsive video */
+    height: auto; /* Maintain aspect ratio */
 }
 
 /* Input Fields Styling */
@@ -128,16 +140,4 @@ button:hover {
 /* Add animation to containers */
 .login-container, .protected-container {
     animation: fadeIn 0.8s ease-in-out;
-}
-
-/* Common styling for both login and protected page */
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern font */
-    background: url('background.gif') no-repeat center center fixed; /* Set GIF as background */
-    background-size: cover; /* Cover the entire background */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
 }
