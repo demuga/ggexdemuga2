@@ -4,3 +4,45 @@
 <input type="password" id="password" placeholder="Password" required>
 <button onclick="login()">Login</button>
 <div id="error-message" style="color: red;"></div>
+
+<script>
+  function login() {
+    var username = document.getElementById('username').value;
+    var password = document.getElementById('password').value;
+
+    // Set a predefined username and password (this can be customized)
+    var validUsername = 'user';
+    var validPassword = 'password123';
+
+    // Check if the provided username and password match the predefined credentials
+    if (username === validUsername && password === validPassword) {
+      // Save a "logged in" status to localStorage
+      localStorage.setItem('loggedIn', true);
+      // Redirect the user to the protected page
+      window.location.href = 'protected-page.html';
+    } else {
+      // Display an error message if credentials are incorrect
+      document.getElementById('error-message').innerText = 'Invalid username or password';
+    }
+  }
+</script>
+
+<h2>Welcome to the Protected Page</h2>
+<p>You are logged in!</p>
+<button onclick="logout()">Logout</button>
+
+<script>
+  // Check if the user is logged in
+  if (!localStorage.getItem('loggedIn')) {
+    // If not logged in, redirect to the login page
+    window.location.href = 'index.html';
+  }
+
+  // Function to log the user out
+  function logout() {
+    // Remove the "logged in" status from localStorage
+    localStorage.removeItem('loggedIn');
+    // Redirect to the login page
+    window.location.href = 'index.html';
+  }
+</script>
