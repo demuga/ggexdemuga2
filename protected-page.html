@@ -10,42 +10,13 @@
     <div class="protected-container">
         <h2>Welcome to the Protected Page</h2>
         <p>You are logged in!</p>
-        <button onclick="logout()">Logout</button>
-    </div>
-
-    <script>
-        // Check if user is logged in
-        if (!localStorage.getItem('loggedIn')) {
-            // If not logged in, redirect to login page
-            window.location.href = 'index.html';
-        }
-
-        // Logout function
-        function logout() {
-            // Remove logged-in status from localStorage
-            localStorage.removeItem('loggedIn');
-            // Redirect to the login page
-            window.location.href = 'index.html';
-        }
-    </script>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Protected Page</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="protected-container">
-        <h2>Welcome to the Protected Page</h2>
-        <p>You are logged in!</p>
+        
+        <!-- Updated Video Element -->
         <video width="600" controls>
-            <source src="video.mp4" type="video/mp4"> <!-- Ensure the file name matches -->
+            <source src="video1.mp4.mp4" type="video/mp4"> <!-- Ensure the file name matches -->
             Your browser does not support the video tag.
         </video>
+        
         <br>
         <button onclick="logout()">Logout</button>
     </div>
@@ -67,4 +38,3 @@
     </script>
 </body>
 </html>
-
